@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Marvel</title>
+      <link rel="stylesheet" type="text/css" href="css/marvel.css">
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <link rel="stylesheet" type="text/css" href="css/animate.css">
+      <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+      <script type="text/javascript" src="js/swiper.min.js"></script>
+      <script type="text/javascript" src="js/wow.min.js"></script>
+      <script type="text/javascript" src="js/preloadjs-0.6.2.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/marvel-loading-style.css">
+      <script type="text/javascript">
+         new WOW().init();
+      </script>
+   </head>
+   <body>
+      <div id="marvel-loading-content">
+         <span id="marvel-loading-text">MARVEL</span>
+      </div>
+      <div id="marvel-div">
+         <!-- Character Selection Section -->
+         <div class="swiper-container marvel-swiper-container">
+            <div class="swiper-wrapper marvel-swiper-wrapper">
+               <div class="swiper-slide marvel-swiper-slide" id="magneto"></div>
+               <div class="swiper-slide marvel-swiper-slide" id="dr-doom"></div>
+               <div class="swiper-slide marvel-swiper-slide" id="kingpin"></div>
+               <div class="swiper-slide marvel-swiper-slide" id="thanos"></div>
+               <div class="swiper-slide marvel-swiper-slide" id="redskull"></div>
+               <div class="swiper-slide marvel-swiper-slide" id="venom"></div>
+            </div>
+         </div>
+         <!-- Define Cards Behaviour -->
+         <script type="text/javascript">
+            var swiper = new Swiper('.marvel-swiper-container', {
+            	effect: 'coverflow',
+            	grabCursor: true,
+            	centeredSlides: true,
+            	slidesPerView: 'auto',
+            	keyboardControl: 'true',
+            	loop: true,
+            	mousewheelControl: true,
+            	coverflow: {
+            		rotate: 50,
+            		stretch: 0,
+            		depth: 100,
+            		modifier: 1,
+            		slideShadows: true
+            	}
+            });
+         </script>
+         <!-- Confirm Selection Div -->
+         <div id="confirm-div">
+            <span id="confirm-yes" onclick="marvel_choose_char()">Choose</span>
+         </div>
+         <!-- Continue Text -->
+         <div id="continue"></div>
+         <!-- Nick Fury Section -->
+         <div id="nick-fury" class="wow animated bounceInLeft" data-wow-duration="0.8s"></div>
+         <div id="nick-dialog" class="wow animated bounceInUp" data-wow-delay="0.8s" data-wow-duration="1.2s">
+            <div id="dialog-text">
+               <div id="typedtext"></div>
+            </div>
+         </div>
+         <!-- Unknown Character Section -->
+         <div id="unknown" class="wow animated bounceInRight" data-wow-duration="0.8s"></div>
+         <div id="unknown-dialog" class="wow animated bounceInUp" data-wow-delay="0.8s" data-wow-duration="1.2s">
+            <div id="unkn-dialog-text">
+               <div id="unkn-typedtext"></div>
+            </div>
+         </div>
+         <!-- Magneto Section -->
+         <div id="magneto-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+         <div id="magneto-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+            <div id="magneto-dialog-text">
+               <div class="char-typedtext" id="magneto-typedtext"></div>
+            </div>
+         </div>
+         <!-- Dr. Doom Section -->
+         <div id="dr-doom-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+         <div id="dr-doom-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+            <div id="dr-doom-dialog-text">
+               <div class="char-typedtext" id="dr-doom-typedtext"></div>
+            </div>
+         </div>
+         <!-- Kingpin Section -->
+         <div id="kingpin-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+         <div id="kingpin-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+            <div id="kingpin-dialog-text">
+               <div class="char-typedtext" id="kingpin-typedtext"></div>
+            </div>
+         </div>
+         <!-- Thanos Section -->
+         <div id="thanos-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+         <div id="thanos-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+            <div id="thanos-dialog-text">
+               <div class="char-typedtext" id="thanos-typedtext"></div>
+            </div>
+         </div>
+         <!-- Redskull Section -->
+         <div id="redskull-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+         <div id="redskull-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+            <div id="redskull-dialog-text">
+               <div class="char-typedtext" id="redskull-typedtext"></div>
+            </div>
+         </div>
+         <!-- Venom Section -->
+         <div id="venom-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+         <div id="venom-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+            <div id="venom-dialog-text">
+               <div class="char-typedtext" id="venom-typedtext"></div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript" src="js/marvel-main.js"></script>
+      <script type="text/javascript" src="js/marvel-dialog.js"></script>
+   </body>
+</html>

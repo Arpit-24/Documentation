@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DC</title>
+	<link rel="stylesheet" type="text/css" href="css/dc.css">
+	<!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript" src="js/preloadjs-0.6.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/dc-loading-style.css">
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+</head>
+<body>
+	<div id="dc-loading-content">
+		<!-- DC Loading Screen Here -->
+	</div>
+	<div id="dc-div">
+		<!-- Character Selection Section -->
+		<div class="swiper-container dc-swiper-container">
+			<div class="swiper-wrapper dc-swiper-wrapper">
+				<div class="swiper-slide dc-swiper-slide" id="superman"></div>
+				<div class="swiper-slide dc-swiper-slide" id="wonderwoman"></div>
+				<div class="swiper-slide dc-swiper-slide" id="batman"></div>
+				<div class="swiper-slide dc-swiper-slide" id="greenlantern"></div>
+				<div class="swiper-slide dc-swiper-slide" id="flash"></div>
+				<div class="swiper-slide dc-swiper-slide" id="aquaman"></div>
+			</div>
+		</div>
+		<!-- Define Cards Behaviour -->
+		<script type="text/javascript">
+			var swiper = new Swiper('.dc-swiper-container', {
+				effect: 'coverflow',
+				grabCursor: true,
+				centeredSlides: true,
+				slidesPerView: 'auto',
+				keyboardControl: 'true',
+				loop: true,
+				mousewheelControl: true,
+				coverflow: {
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows: true
+				}
+			});
+		</script>
+		<!-- Confirm Selection Div -->
+		<div id="dc-confirm-div">
+			<span id="dc-confirm-yes" onclick="dc_choose_char()">Choose</span>
+		</div>
+		<!-- Continue Text -->
+		<div id="dc-continue"></div>
+		<!-- Steppenwolf Section -->
+		<div id="steppenwolf" class="wow animated bounceInLeft" data-wow-duration="0.8s"></div>
+		<div id="steppenwolf-dialog" class="wow animated bounceInUp" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="dc-dialog-text"><div id="dc-typedtext"></div></div>
+		</div>
+		<!-- Unknown Character Section -->
+		<div id="dc-unknown" class="wow animated bounceInRight" data-wow-duration="0.8s"></div>
+		<div id="dc-unknown-dialog" class="wow animated bounceInUp" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="dc-unkn-dialog-text"><div id="dc-unkn-typedtext"></div></div>
+		</div>
+		<!-- Superman Section -->
+		<div id="superman-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="superman-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="superman-dialog-text"><div class="dc-char-typedtext" id="superman-typedtext"></div></div>
+		</div>
+		<!-- Wonderwoman Section -->
+		<div id="wonderwoman-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="wonderwoman-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="wonderwoman-dialog-text"><div class="dc-char-typedtext" id="wonderwoman-typedtext"></div></div>
+		</div>
+		<!-- Batman Section -->
+		<div id="batman-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="batman-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="batman-dialog-text"><div class="dc-char-typedtext" id="batman-typedtext"></div></div>
+		</div>
+		<!-- Green Lantern Section -->
+		<div id="greenlantern-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="greenlantern-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="greenlantern-dialog-text"><div class="dc-char-typedtext" id="greenlantern-typedtext"></div></div>
+		</div>
+		<!-- Flash Section -->
+		<div id="flash-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="flash-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="flash-dialog-text"><div class="dc-char-typedtext" id="flash-typedtext"></div></div>
+		</div>
+		<!-- Aquaman Section -->
+		<div id="aquaman-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="aquaman-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="aquaman-dialog-text"><div class="dc-char-typedtext" id="aquaman-typedtext"></div></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/dc-main.js"></script>
+	<script type="text/javascript" src="js/dc-dialog.js"></script>
+</body>
+</html>

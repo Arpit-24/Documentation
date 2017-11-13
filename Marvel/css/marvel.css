@@ -1,0 +1,209 @@
+body, html {
+   margin: 0;
+   padding: 0;
+   font-size: 2.7vh;
+}
+#marvel-div {
+   width: 100vw;
+   height: 92vh;
+   background: black;
+}
+/*------------Nick's Dialogs-----------*/
+
+#nick-fury {
+   width: 15vw;
+   height: 30vh;
+   position: fixed;
+   bottom: 8vh;
+   left: 0;
+   background-image: url(../images/nick.svg);
+   background-size: 100% 100%;
+   display: none;
+}
+#nick-dialog {
+   width: 100vw;
+   height: 35vh;
+   color: #FFF;
+   position: fixed;
+   top: 32vh;
+   left: 0;
+   background-image: url(../images/chatbox.svg);
+   background-size: 100% 100%;
+   display: none;
+}
+#dialog-text {
+   display: inline-block;
+   padding: 8vh 6vw;
+}
+/*---------------Animate Typer-----------*/
+
+.cursor {
+   animation: blink 500ms linear infinite alternate;
+}
+.cont-cursor {
+   animation: blink 50ms linear infinite alternate;
+}
+@-webkit-keyframes blink {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+@-moz-keyframes blink {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+@keyframes blink {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+/*--------------------Media Queries---------------*/
+
+@media screen and (min-width: 768px) {
+   #nick-dialog {
+      width: 70vw;
+      left: 5vw;
+   }
+   #nick-fury {
+      left: 5vw;
+   }
+   #unknown-dialog, #magneto-dialog, #dr-doom-dialog, #kingpin-dialog, #redskull-dialog, #thanos-dialog, #venom-dialog {
+      width: 70vw !important;
+      right: 5vw !important;
+   }
+   #unknown, #magneto-sec, #dr-doom-sec, #kingpin-sec, #redskull-sec, #thanos-sec, #venom-sec {
+      right: 5vw !important;
+   }
+   .marvel-swiper-container {
+      height: 70vh !important;
+   }
+   .marvel-swiper-slide {
+      width: 30vw !important;
+   }
+}
+@media screen and (max-width: 768px) {
+   .marvel-swiper-container {
+      height: 60vh !important;
+   }
+   .marvel-swiper-slide {
+      width: 60vw !important;
+   }
+}
+/*--------------------Continue Text-----------------*/
+
+#continue {
+   color: white;
+   position: fixed;
+   top: 22vh;
+   width: 100vw;
+   text-align: center;
+}
+/*----------------------Character Dialogs--------------------*/
+
+#unknown, #magneto-sec, #dr-doom-sec, #kingpin-sec, #redskull-sec, #thanos-sec, #venom-sec {
+   width: 15vw;
+   height: 30vh;
+   position: fixed;
+   bottom: 8vh;
+   right: 0;
+   background-size: 100% 100%;
+   display: none;
+}
+#unknown {
+   background-image: url(../images/unknown.svg);
+}
+#magneto-sec {
+   background-image: url(../images/cards/magneto.svg);
+}
+#dr-doom-sec {
+   background-image: url(../images/cards/doom.svg);
+}
+#kingpin-sec {
+   background-image: url(../images/cards/kingpin.svg);
+}
+#thanos-sec {
+   background-image: url(../images/cards/thanos.svg);
+}
+#redskull-sec {
+   background-image: url(../images/cards/redskull.svg);
+}
+#venom-sec {
+   background-image: url(../images/cards/venom.svg);
+}
+#unknown-dialog, #magneto-dialog, #dr-doom-dialog, #kingpin-dialog, #redskull-dialog, #thanos-dialog, #venom-dialog {
+   width: 100vw;
+   height: 35vh;
+   color: #FFF;
+   position: fixed;
+   top: 32vh;
+   right: 0;
+   background-image: url(../images/chatbox-right.svg);
+   background-size: 100% 100%;
+   display: none;
+}
+#unkn-dialog-text, #magneto-dialog-text, #dr-doom-dialog-text, #kingpin-dialog-text, #redskull-dialog-text, #thanos-dialog-text, #venom-dialog-text {
+   display: inline-block;
+   padding: 8vh 6vw;
+}
+/*---------------------Character Selection-------------------*/
+
+.marvel-swiper-container {
+   width: 100vw;
+   height: 70vh;
+   position: absolute;
+   top: 10vh;
+   z-index: -1 !important;
+}
+.marvel-swiper-slide {
+   background-position: center;
+   width: 30vw;
+}
+#magneto {
+   background-image: url(../images/cards/magneto.svg);
+   background-size: 100% 100%;
+}
+#dr-doom {
+   background-image: url(../images/cards/doom.svg);
+   background-size: 100% 100%;
+}
+#kingpin {
+   background-image: url(../images/cards/kingpin.svg);
+   background-size: 100% 100%;
+}
+#thanos {
+   background-image: url(../images/cards/thanos.svg);
+   background-size: 100% 100%;
+}
+#redskull {
+   background-image: url(../images/cards/redskull.svg);
+   background-size: 100% 100%;
+}
+#venom {
+   background-image: url(../images/cards/venom.svg);
+   background-size: 100% 100%;
+}
+/*-------------------------Confirm Selection---------------------*/
+
+#confirm-div {
+   width: 30vw;
+   text-align: center;
+   position: fixed;
+   bottom: 8vh;
+   left: 35vw;
+   display: none;
+   cursor: pointer;
+}
+#confirm-yes {
+   background-color: lightgreen;
+   padding: 10px 20px;
+}

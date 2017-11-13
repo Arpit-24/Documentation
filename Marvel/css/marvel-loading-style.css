@@ -1,0 +1,32 @@
+body {
+   margin: 0;
+   padding: 0;
+}
+#marvel-loading-content {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 200;
+   width: 100vw;
+   height: 92vh;
+   background-color: black;
+   text-align: center;
+}
+#marvel-loading-text {
+   font-size: 20vh;
+   position: fixed;
+   top: 36vh;
+   left: 50%;
+   transform: translateX(-50%);
+   color: rgba(255, 255, 255, 0.1);
+   background-image: url(../images/loadMarv.gif);
+   background-position: left -10px top -190px;
+   background-repeat: repeat-x;
+   -webkit-background-clip: text;
+   /*animation: wave1 5s linear infinite;*/
+}
+@media screen and (max-width: 768px) {
+   #marvel-loading-text {
+      font-size: 10vh;
+   }
+}
